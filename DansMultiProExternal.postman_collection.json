@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "06f82c4b-5b07-47dd-a074-a37886858f38",
+		"name": "DansMultiProExternal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"user1@gmail.com\",\r\n    \"name\":\"user 1\",\r\n    \"phone_number\":\"08912312311\",\r\n    \"username\":\"user1\",\r\n    \"password\":\"user123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"user1\",\r\n    \"password\":\"user123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/user/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Job List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/job/get",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"job",
+						"get"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "python",
+							"disabled": true
+						},
+						{
+							"key": "location",
+							"value": "berlin",
+							"disabled": true
+						},
+						{
+							"key": "full_time",
+							"value": "false",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Job Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/job/get/f4a7c47f-c8ac-49fa-b15b-4ab37bfd2307",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"job",
+						"get",
+						"f4a7c47f-c8ac-49fa-b15b-4ab37bfd2307"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
